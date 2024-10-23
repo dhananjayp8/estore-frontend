@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import AppContext from "../context/AppContext";
 import ShowOrderProduct from "./ShowOrderProduct";
-import TableProduct from "./TableProduct";
+import { Checkmark } from "react-checkmark";
 const OrderConfirmation = () => {
   // const { orderId } = useParams();
   const { userOrder, cart } = useContext(AppContext);
@@ -18,7 +18,9 @@ const OrderConfirmation = () => {
   return (
     <>
       <div className="container my-3">
-        <h1 className="text-center">Your order has been confirm,</h1>
+        <h1 className="text-center">
+          <span>Your order has been confirm</span> <Checkmark />
+        </h1>
         <h3 className="text-center">It will delivered soon</h3>
       </div>
 

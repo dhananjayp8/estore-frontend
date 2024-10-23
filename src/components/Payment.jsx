@@ -232,6 +232,10 @@ const PaymentForm = () => {
   return (
     <div className="container">
       <h2 className="text-center my-4">Enter Payment Details</h2>
+      <p>
+        Use 4242 4242 4242 4242 as a card number for testing and any number for
+        cvv and zip{" "}
+      </p>
       <div className="card p-4">
         <CardElement
           options={{

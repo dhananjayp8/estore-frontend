@@ -26,7 +26,7 @@ const Navbar = () => {
   };
 
   const filterByPrice = (price) => {
-    setFilteredData(products.filter((data) => data.price >= price));
+    setFilteredData(products.filter((data) => data.price <= price));
   };
 
   // New function to handle sorting by price

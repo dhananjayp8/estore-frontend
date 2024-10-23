@@ -140,13 +140,18 @@
 
 import React, { useContext, useState } from "react";
 import AppContext from "../../context/AppContext";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Faq from "../Accordion";
 import Footer from "../Footer";
 
 const ShowProduct = () => {
   const { products, filteredData, addToCart } = useContext(AppContext);
+  const navigate = useNavigate();
   const [activeAccordionIndex, setActiveAccordionIndex] = useState(null);
+  const handleBuyNow = (product) => {
+    addToCart(product._id, product.title, product.price, 1, product.imgSrc);
+    navigate("/cart"); // Redirect to the cart page
+  };
 
   const toggleAccordion = (index) => {
     // Toggle the active accordion index
@@ -191,9 +196,14 @@ const ShowProduct = () => {
                 {/* Card Body */}
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
+                  <span>Rs. {product.price}</span>
                   <div className="my-3 d-flex justify-content-around">
-                    <button className="btn btn-primary product-btn">
-                      Rs. {product.price}
+                    <button
+                      className="btn btn-primary product-btn"
+                      onClick={handleBuyNow(product)}
+                    >
+                      {/* Rs. {product.price} */}
+                      Buy Now
                     </button>
                     <button
                       className="btn btn-warning product-btn"

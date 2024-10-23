@@ -5,8 +5,8 @@ import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 const AppState = (props) => {
   const data = 10;
-  const url = "http://localhost:6001/api";
-  // const url = "https://estore-backend-2.onrender.com/api";
+  // const url = "http://localhost:6001/api";
+  const url = "https://estore-backend-2.onrender.com/api";
   const [products, setProducts] = useState([]);
   const [token, setToken] = useState([]);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
