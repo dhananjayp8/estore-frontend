@@ -192,11 +192,11 @@ const ShowProduct = () => {
                 <div className="card-body">
                   <h5 className="card-title">{product.title}</h5>
                   <div className="my-3 d-flex justify-content-around">
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary product-btn">
                       Rs. {product.price}
                     </button>
                     <button
-                      className="btn btn-warning"
+                      className="btn btn-warning product-btn"
                       onClick={() =>
                         addToCart(
                           product._id,

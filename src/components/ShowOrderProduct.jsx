@@ -67,7 +67,7 @@ const ShowOrderProduct = ({ items }) => {
                 className="btn btn-warning"
                 style={{ fontWeight: "bold" }}
               >
-                {price}
+                Rs. {price}
               </button>
             </td>
             <td className="bg-dark text-light">
