@@ -4,10 +4,10 @@ function Faq() {
   return (
     <Accordion defaultActiveKey="0">
       <Accordion.Item eventKey="0">
-        <Accordion.Header>
+        <Accordion.Header className="accordion-header">
           What is the warranty period for electronics?
         </Accordion.Header>
-        <Accordion.Body>
+        <Accordion.Body className="accordion-body">
           The warranty period varies by product and brand, typically ranging
           from 1 to 3 years. Please check the specific product details for
           warranty information.

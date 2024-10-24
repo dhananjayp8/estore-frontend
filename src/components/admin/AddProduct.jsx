@@ -321,7 +321,6 @@ const AddProduct = () => {
               <option>--Select Category--</option>
               <option>Mobiles</option>
               <option>Laptops</option>
-              <option>Tablets</option>
               <option>Cameras</option>
               <option>Headphones</option>
             </select>

@@ -200,7 +200,7 @@ const ShowProduct = () => {
                   <div className="my-3 d-flex justify-content-around">
                     <button
                       className="btn btn-primary product-btn"
-                      onClick={handleBuyNow(product)}
+                      onClick={() => handleBuyNow(product)}
                     >
                       {/* Rs. {product.price} */}
                       Buy Now

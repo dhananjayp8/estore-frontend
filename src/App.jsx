@@ -22,6 +22,7 @@ import AdminPage from "./components/admin/AdminPage";
 import AllUsers from "./components/admin/AllUsers";
 import AdminProduct from "./components/admin/AdminProduct";
 import EditProduct from "./components/admin/EditProduct";
+import NotFound from "./components/NotFound";
 function App() {
   const { data, isAdminAuthenticated } = useContext(AppContext);
   return (
@@ -41,6 +42,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/orderconfirmation" element={<OrderConfirmation />} />
+          <Route path="*" element={<NotFound />} />
 
           <Route path="/admin/login" element={<AdminLogin />} />
 
